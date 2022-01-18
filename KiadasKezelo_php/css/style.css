@@ -1,0 +1,482 @@
+/*todo=============== GOOGLE FONTS ===============*/
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Dongle:wght@300&family=Norican&family=Quicksand:wght@300&display=swap');
+
+/*todo=============== css változók ===============*/
+
+:root {
+    --kekes_fekete: rgb(36, 41, 46);
+    --betutipus: 'Quicksand', sans-serif;
+    --bejelentkezes_gomb: #135d99;
+    --hatter: #135d99;
+    --regiszt_gomb_keret: #135d99;
+    --regisztaico_gomb: #ffffff;
+}
+
+
+/*todo=============== Alap  ===============*/
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--betutipus);
+}
+
+
+/*todo=============== scrollbar ===============*/
+
+::-webkit-scrollbar {
+    width: 12px;
+    height: 0;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #e2eaee;
+    border: none;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #117cbf;
+    border-radius: 0px;
+}
+
+
+/*todo=============== 0. Szekció ===============*/
+
+
+/*todo=============== Nav ===============*/
+
+.nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 50px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background-color: var(--kekes_fekete);
+}
+
+
+/*todo=============== NAV LOGO ===============*/
+
+#logo_kep {
+    width: 41px;
+    height: 41px;
+    background: url('../image/logo/raketa_javitott.png');
+    background-position: center;
+    background-size: cover;
+    z-index: 200;
+    margin-left: 48px;
+    /*border: green solid 2px;*/
+}
+
+.nav_logo {
+    font-weight: bold;
+    font-size: 15px;
+    text-transform: uppercase;
+    color: white;
+    margin-left: 5px;
+}
+
+
+/*todo=============== 1. Szekció ===============*/
+
+#elsoSzekcio {
+    /**=============== Háttérképet lehetne belerakni ===============*/
+    background-position: center;
+    background-size: cover;
+}
+
+.elso_szekcio {
+    margin-top: 50px;
+    /* border: green solid 2px;*/
+    display: block;
+}
+
+.elso_szekcio_raketa {
+    order: 1;
+    margin-left: auto;
+    margin-right: auto;
+    height: 265px;
+    width: 265px;
+    background: url('../image/hatter/raketa_hatter_2.png') no-repeat;
+    background-position: center;
+    background-size: cover;
+    /* border: green solid 2px;*/
+}
+
+.elso_szekcio_leiras {
+    margin-left: 48px;
+    order: 2;
+    /* border: green solid 2px;*/
+}
+
+.elso_szekcio_udvozles {
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.elso_szekcio_gombok>.btn_bejelentkezes,
+.btn_regisztacio {
+    display: block;
+    border-style: none;
+    font-weight: bolder;
+    border-radius: 7px;
+    text-decoration: none;
+}
+
+#btnBejelentkezes {
+    margin-top: 8px;
+    background-color: var(--bejelentkezes_gomb);
+    color: white;
+    height: 35px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+#btnBejelentkezes:hover {
+    letter-spacing: 0.5px;
+    transition: all 0.5s;
+}
+
+#btnRegisztacio {
+    margin-top: 8px;
+    background-color: var(--regisztaico_gomb);
+    border: var(--regiszt_gomb_keret) solid 1px;
+    color: var(--regiszt_gomb_keret);
+    height: 35px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 17px;
+}
+
+#btnRegisztacio:hover {
+    letter-spacing: 0.5px;
+    transition: all 0.5s;
+}
+
+
+/*todo=============== 2. Szekció ===============*/
+
+.masodik_szekcio {
+    background: var(--hatter);
+    display: block;
+    border: none;
+}
+
+
+/*todo=============== hulláb díszítés ===============*/
+
+.masodik_szekcio_hullam {
+    position: relative;
+}
+
+.custom-shape-divider-top-1636999801 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1636999801 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    /* border: rgb(255, 149, 62) solid 5px;*/
+}
+
+.custom-shape-divider-top-1636999801 .shape-fill {
+    fill: #ffffff;
+}
+
+
+/*todo=============== dobozok ===============*/
+
+#dobozOsszefogas {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.dobozok {
+    margin-top: 40px;
+    background: white;
+    height: 300px;
+    width: 300px;
+    border-radius: 6%;
+    padding: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.doboz_szoveg {
+    font-size: 15px;
+}
+
+#harmadikDoboz {
+    margin-bottom: 50px;
+}
+
+
+/*todo=============== 3. Szekció ===============*/
+
+#harmadikSzekcio {
+    background: #ffffff;
+    display: block;
+    /* border: red solid 2px;*/
+}
+
+
+/*todo=============== hulláb díszítés ===============*/
+
+.harmadik_szekcio_hullam {
+    position: relative;
+}
+
+.custom-shape-divider-top-1639760920 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1639760920 svg {
+    position: relative;
+    display: block;
+    width: calc(140% + 1.3px);
+    height: 80px;
+    /*border: rgb(255, 149, 62) solid 5px;*/
+}
+
+.custom-shape-divider-top-1639760920 .shape-fill {
+    fill: var(--hatter);
+}
+
+
+/*todo=============== Szöveg és regisztációs gomb ===============*/
+
+#harmadik_szekcio_szoveg_gomb {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    /* border: rgb(62, 255, 68) solid 5px;*/
+    padding-left: 20px;
+}
+
+#harmadik_szekcio_szoveg {
+    font-size: 30px;
+}
+
+#harmadik_szekcioBtnRegisztacio {
+    margin-top: 8px;
+    background-color: var(--regisztaico_gomb);
+    border: var(--regiszt_gomb_keret) solid 1px;
+    color: var(--regiszt_gomb_keret);
+    height: 35px;
+    width: 120px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 7px;
+    font-weight: bolder;
+    font-size: 17px;
+}
+
+#harmadik_szekcioBtnRegisztacio:hover {
+    letter-spacing: 0.5px;
+    transition: all 0.5s;
+}
+
+#harmadik_szekcioBtnRegisztacio a {
+    text-decoration: none;
+    color: #135d99;
+    font-weight: bold;
+}
+
+#footer {
+    background-color: var(--hatter);
+    height: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/**todo ======================================================
+
+  *todo             Képernyő méret beállításai:   
+
+  *todo ======================================================*/
+
+
+/**=========================     700px-nél:    ========================*/
+
+@media screen and (min-width: 700px) {
+    /**===== 1. szekció beállításai: =====*/
+    .elso_szekcio {
+        display: flex;
+    }
+    .elso_szekcio_leiras {
+        order: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .elso_szekcio_raketa {
+        order: 2;
+        height: 365px;
+        width: 365px;
+    }
+}
+
+
+/**=======================   850px-nél:   =======================*/
+
+@media screen and (min-width: 850px) {
+    /**===== 1. szekció beállításai: =====*/
+    .elso_szekcio_raketa {
+        order: 2;
+        height: 365px;
+        width: 365px;
+    }
+    .elso_szekcio_udvozles {
+        font-size: 35px;
+    }
+    /**====== 2. szekció beállításai: ======*/
+    #dobozOsszefogas {
+        display: flex;
+        flex-direction: row;
+    }
+    .dobozok {
+        height: 280px;
+        width: 280px;
+    }
+    .doboz_cim {
+        font-size: 20px;
+    }
+    #dobozOsszefogas>.dobozok {
+        margin-bottom: 100px;
+    }
+    #harmadikDoboz {
+        margin-bottom: 0px;
+    }
+    /**===== 3. szekció beállításai: =====*/
+    .custom-shape-divider-top-1639760920 svg {
+        height: 200px;
+    }
+    #harmadik_szekcio_szoveg {
+        font-size: 40px;
+    }
+    #harmadik_szekcioBtnRegisztacio {
+        margin-top: 25px;
+        height: 45px;
+        width: 140px;
+    }
+    #harmadik_szekcioBtnRegisztacio {
+        font-size: 20px;
+    }
+}
+
+
+/**=========================     1000px-nél:    ========================*/
+
+@media screen and (min-width: 1000px) {
+    /**===== 1. szekció beállításai: =====*/
+    .elso_szekcio_raketa {
+        order: 2;
+        height: 565px;
+        width: 565px;
+    }
+    .elso_szekcio_udvozles {
+        font-size: 40px;
+    }
+    #btnRegisztacio {
+        height: 45px;
+        width: 140px;
+        font-size: 18px;
+    }
+    #btnBejelentkezes {
+        height: 45px;
+        width: 140px;
+        font-size: 18px;
+    }
+}
+
+
+/**=========================      1300px-nél:      ============================*/
+
+@media screen and (min-width: 1300px) {
+    /**===== 1. szekció beállításai: =====*/
+    #logo_kep {
+        margin-left: 100px;
+    }
+    .elso_szekcio_raketa {
+        order: 2;
+        height: 725px;
+        width: 725px;
+    }
+    .elso_szekcio_leiras {
+        margin-left: 100px;
+    }
+    .elso_szekcio_udvozles {
+        font-size: 60px;
+    }
+    /**===== 2. szekció beállításai: =====*/
+    .dobozok {
+        height: 420px;
+        width: 420px;
+    }
+    .doboz_cim {
+        font-size: 35px;
+    }
+    .doboz_szoveg {
+        font-size: 30px;
+    }
+    .custom-shape-divider-top-1636999801 svg {
+        height: 180px;
+    }
+    .dobozok {
+        margin-top: 50px;
+    }
+    /**===== 3. szekció beállításai: =====*/
+    #harmadik_szekcio_szoveg {
+        font-size: 45px;
+    }
+    #harmadik_szekcio_szoveg_gomb {
+        height: 450px;
+    }
+}
